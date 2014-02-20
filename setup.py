@@ -8,6 +8,9 @@ setup(name='KageSenshi_Org',
       url='http://www.python.org/sigs/distutils-sig/',
 #      install_requires=['Django>=1.3'],
       install_requires=[
-        'morepath',
+          # needed by morepath
+        'venusian >= 1.0a8',
+        'reg >= 0.5',
+        'werkzeug >= 0.9.4',
       ]
      )
