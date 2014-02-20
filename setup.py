@@ -1,10 +1,13 @@
 from setuptools import setup
 
-setup(name='YourAppName',
+setup(name='KageSenshi_Org',
       version='1.0',
-      description='OpenShift App',
-      author='Your Name',
-      author_email='example@example.com',
+      description='KageSenshi website',
+      author='Izhar Firdaus',
+      author_email='izhar@kagesenshi.org',
       url='http://www.python.org/sigs/distutils-sig/',
 #      install_requires=['Django>=1.3'],
+      install_requires=[
+        'morepath',
+      ]
      )
