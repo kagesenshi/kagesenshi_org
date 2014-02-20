@@ -13,4 +13,7 @@ except IOError:
 # 
 import morepath
 
+config = morepath.setup()
+config.scan()
+config.commit()
 application = morepath.App()
