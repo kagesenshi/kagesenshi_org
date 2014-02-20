@@ -13,9 +13,6 @@ except IOError:
 # 
 import morepath
 
-config = morepath.setup()
-config.scan()
-config.commit()
 application = morepath.App()
 
 @application.path(path='')
@@ -25,3 +22,8 @@ class Root(object):
 @application.html(model=Root)
 def hello_root(self, request):
     return u'<h1>Hello World</h1>'
+
+
+config = morepath.setup()
+config.scan()
+config.commit()
