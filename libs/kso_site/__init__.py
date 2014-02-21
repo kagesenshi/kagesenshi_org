@@ -12,10 +12,11 @@ class BaseModel(object):
         output =  {
             'main_template': templates['main_template.pt'],
             'context': self,
-            'static_url': '/static/'
+            'static_url': '/static/',
+            'portal_url': request.url_root,
         }
         if request:
-            output['static_url'] = os.path.join(request.url,'static')
+            output['static_url'] = os.path.join(request.url_root,'static')
         return output
 
 class template(object):
@@ -25,7 +26,7 @@ class template(object):
 
     def __call__(self, func):
         def render(context, request):
-            result = func(context, request)
+            result = func(context, request) or {}
             return templates[self.name](options=result,
                     **context.template_vars(request))
         render.__name__ = func.__name__

@@ -8,6 +8,10 @@ class Root(BaseModel):
 @app.html(model=Root)
 @template('index.pt')
 def index(context, request):
-    return {}
+    pass
 
 
+@app.html(model=Root, name='about')
+@template('about.pt')
+def about(context, request):
+    pass
