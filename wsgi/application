@@ -17,5 +17,5 @@ import kso_site
 application = kso_site.app
 
 config = morepath.setup()
-config.scan()
+config.scan(package=kso_site)
 config.commit()
