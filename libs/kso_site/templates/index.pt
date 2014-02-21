@@ -38,6 +38,52 @@
     </div>
     <!-- /.intro-header -->
 
+    <div id="about" class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-7 col-sm-6">
+                    <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">About Izhar Firdaus / KageSenshi</h2>
+                        <p class="lead">Izhar Firdaus a.k.a KageSenshi , is a FOSS enthusiast, advocate and developer based in Malaysia. He believe that knowledge should always be free and available for all, and is a fan of componentized, reusable and modular software design. He is an active Malaysian FOSS contributor and contributes to a number of project and community during his free time.</p>
+                    </div>
+                    <div class="col-lg-3 col-lg-offset-2 col-sm-6">
+                        <img class="img-responsive" src="${static_url}/kagesenshi-japantext.png"/>
+                    </div>
+
+                </div>
+                <!-- /.container -->
+
+            </div>
+
+        </div>
+
+    <div id="contact" class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-7 col-sm-6">
+                    </div>
+                    <div class="col-lg-3 col-lg-offset-2 col-sm-6">
+                    <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">Contact</h2>
+                        <p class="lead">Phone: +60172792765</p>
+                        <p class="lead">Email: <span style="unicode-bidi: bidi-override;direction:rtl">gro.ihsnesegak@rahzi</span></p>
+                    </div>
+
+                </div>
+                <!-- /.container -->
+
+            </div>
+
+        </div>
+
+
+
     </div>
 </body>
 </html>
