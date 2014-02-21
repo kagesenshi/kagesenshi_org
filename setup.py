@@ -12,6 +12,6 @@ setup(name='kagesenshi_org',
         'venusian >= 1.0a8',
         'reg >= 0.5',
         'werkzeug >= 0.9.4',
-        'chameleon',
+        'Chameleon >= 2.14',
       ]
      )
