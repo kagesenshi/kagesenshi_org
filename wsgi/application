@@ -14,7 +14,7 @@ except IOError:
 import morepath
 import kso_site
 
-application = kso_site.fanstatic_app
+application = kso_site.app
 
 config = morepath.setup()
 config.scan(package=kso_site)
