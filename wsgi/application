@@ -12,17 +12,9 @@ except IOError:
 # line, it's possible required libraries won't be in your searchable path
 # 
 import morepath
+import kso_site
 
-application = morepath.App()
-
-@application.path(path='')
-class Root(object):
-    pass
-
-@application.html(model=Root)
-def hello_root(self, request):
-    return u'<h1>Hello World</h1>'
-
+application = kso_site.app
 
 config = morepath.setup()
 config.scan()
