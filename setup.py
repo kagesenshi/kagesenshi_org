@@ -1,6 +1,6 @@
 from setuptools import setup
 
-setup(name='KageSenshi_Org',
+setup(name='kagesenshi_org',
       version='1.0',
       description='KageSenshi website',
       author='Izhar Firdaus',
@@ -12,5 +12,6 @@ setup(name='KageSenshi_Org',
         'venusian >= 1.0a8',
         'reg >= 0.5',
         'werkzeug >= 0.9.4',
+        'chameleon',
       ]
      )

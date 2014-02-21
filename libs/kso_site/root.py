@@ -1,10 +1,13 @@
-from kso_site import app
+from kso_site import app, BaseModel, template
 
 @app.path(path='')
-class Root(object):
+class Root(BaseModel):
     pass
 
+
 @app.html(model=Root)
-def hello_root(self, request):
-    return u'<h1>Hello World</h1>'
+@template('index.pt')
+def index(context, request):
+    return {}
+
 
