@@ -70,8 +70,8 @@
     </footer> 
 
     <!-- JavaScript -->
-    <script src="${static_url}/js/jquery-1.10.2.js"></script>
-    <script src="${static_url}/js/bootstrap.js"></script>
+    <script src="${static_url}/landing-page/js/jquery-1.10.2.js"></script>
+    <script src="${static_url}/landing-page/js/bootstrap.js"></script>
 
 </body>
 </html>
