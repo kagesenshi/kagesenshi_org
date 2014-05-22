@@ -10,8 +10,8 @@ setup(name='kagesenshi_org',
           # needed by morepath
 #        'venusian >= 1.0a8',
 #        'reg >= 0.5',
-#        'werkzeug >= 0.9.4',
-#        'Chameleon >= 2.14',
+        'werkzeug >= 0.9.4',
+        'Chameleon >= 2.14',
         'morepath == 0.2',
       ]
      )

@@ -13,10 +13,10 @@ class BaseModel(object):
             'main_template': templates['main_template.pt'],
             'context': self,
             'static_url': '/static/',
-            'portal_url': request.url_root,
+            'application_url': request.application_url,
         }
         if request:
-            output['static_url'] = os.path.join(request.url_root,'static')
+            output['static_url'] = os.path.join(request.application_url,'static')
         return output
 
 class template(object):

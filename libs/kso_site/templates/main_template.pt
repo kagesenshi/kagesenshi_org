@@ -32,15 +32,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="${portal_url}">KageSenshi.org</a>
+                <a class="navbar-brand" href="${application_url}">KageSenshi.org</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="${portal_url}/#about">About</a>
+                    <li><a href="${application_url}/#about">About</a>
                     </li>
-                        <li><a href="${portal_url}/#contact">Contact</a></li>
+                        <li><a href="${application_url}/#contact">Contact</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -56,12 +56,12 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="list-inline">
-                        <li><a href="${portal_url}">Home</a>
+                        <li><a href="${application_url}">Home</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
-                        <li><a href="${portal_url}/#about">About</a></li>
+                        <li><a href="${application_url}/#about">About</a></li>
                         <li class="footer-menu-divider">&sdot;</li>
-                        <li><a href="${portal_url}/#contact">Contact</a></li>
+                        <li><a href="${application_url}/#contact">Contact</a></li>
                     </ul>
                     <p class="copyright text-muted small">Copyright &copy; KageSenshi.org. All Rights Reserved</p>
                 </div>
