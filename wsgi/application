@@ -13,12 +13,23 @@ except IOError:
 # 
 import morepath
 import kso_site
+import wfront
+import wsgi_fileserver
 
-application = kso_site.app
+fileserver_app = wsgi_fileserver.WSGIFileServerApplication(
+    root_path=os.path.join(os.environ['OPENSHIFT_DATA_DIR'], 'repository')
+)
+
+mapping = [
+    ('www.kagesenshi.org', kso_site.app),
+    ('repo.koslab.org', fileserver_app)
+]
 
 config = morepath.setup()
 config.scan(package=kso_site)
 config.commit()
 
+application = wfront.route(mapping, default=kso_site.app)
+
 if __name__=='__main__':
-    app.run()
+    application.run()
