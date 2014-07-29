@@ -14,10 +14,10 @@ except IOError:
 import morepath
 import kso_site
 import wfront
-import wsgi_fileserver
+import fileserver
 
-fileserver_app = wsgi_fileserver.WSGIFileServerApplication(
-    root_path=os.path.join(os.environ['OPENSHIFT_DATA_DIR'], 'repository')
+fileserver_app = fileserver.DirectoryServer(
+    directory=os.path.join(os.environ['OPENSHIFT_DATA_DIR'], 'repository')
 )
 
 mapping = [

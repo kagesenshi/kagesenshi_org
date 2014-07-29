@@ -14,6 +14,6 @@ setup(name='kagesenshi_org',
         'Chameleon >= 2.14',
         'morepath == 0.2',
         'wfront',
-        'wsgi-fileserver',
+        'fileserver',
       ]
      )
