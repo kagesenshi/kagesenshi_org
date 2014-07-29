@@ -8,7 +8,7 @@
                 <title>KOSLAB PlatoCDP</title>
                 <meta property="og:title" content="KOSLAB PlatoCDP"/>
                 <meta property="og:description" content="Enterprise Plone distribution for intranet, extranet, and knowledge sharing portals"/>
-                <meta property="og:image" content="${static_url}/koslab-logo.png"/>
+                <meta property="og:image" content="${static_url}/koslab-icon.png"/>
             </metal:slot>
         </head>
 <body>
