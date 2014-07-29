@@ -29,7 +29,7 @@ mapping = [
 
 config = morepath.setup()
 config.scan(package=kso_site)
-config.scap(package=koslab_site)
+config.scan(package=koslab_site)
 config.commit()
 
 application = wfront.route(mapping, default=kso_site.app)
