@@ -13,6 +13,7 @@ except IOError:
 # 
 import morepath
 import kso_site
+import koslab_site
 import wfront
 import fileserver
 
@@ -22,7 +23,8 @@ fileserver_app = fileserver.DirectoryServer(
 
 mapping = [
     ('www.kagesenshi.org', kso_site.app),
-    ('repo.koslab.org', fileserver_app)
+    ('repo.koslab.org', fileserver_app),
+    ('www.koslab.org', koslab_site.app)
 ]
 
 config = morepath.setup()

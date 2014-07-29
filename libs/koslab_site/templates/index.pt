@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      metal:use-macro="main_template.macros['master']">
+<head>
+</head>
+<body>
+    <div metal:fill-slot="content">
+    <div class="intro-header">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>KOSLAB PlatoCDP</h1>
+                        <h3>Enterprise Plone distribution, for intranet, extranet, and knowledge sharing portals</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline">
+                            <li><a href="#installation" class="btn btn-primary btn-lg"><span class="network-name">Download &amp; Install</span></a></li>
+                            <li><a href="#enterprise" class="btn btn-default btn-lg"><span class="network-name">Services, Training, &amp; Support</span></a></li>
+                            <li><a href="https://github.com/koslab/" class="btn btn-default btn-lg">
+                                    <i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <div id="about" class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-7 col-sm-6">
+                    <hr class="section-heading-spacer"/>
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">The power of Plone, without the headache</h2>
+                    <p class="lead">One of the common challenge of setting up Plone is the installation process. We have packaged Plone following for common organizational website and intranet use-cases into a quick-and-easy deployment RPM, preconfigured and ready as a multi-instance Zope cluster.</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-1 col-sm-6">
+                    <br/><br/><br/><br/><br/>
+                    <img src="${static_url}/koslab/plone-logo.png"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-sm-6" style="text-align:center">
+                    <h2 class="section-heading">Core Components of PlatoCDP 4.0</h2>
+                    <img src="${static_url}/koslab/platocdp-core-addons.png"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-sm-6">
+                    <hr class="section-heading-spacer"/>
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Fully Open Source extensions, developed in the Open</h2>
+                    <p class="lead">
+                        PlatoCDP is built using extensions which are completely Open Source and on the Plone collective. We conduct testing and integration activities to ensure that only quality extensions are included to bring a more reliable release and upgrade process into the distribution. Fixes are contributed back upstream to further improve the collective.
+                    </p>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <br/><br/><br/><br/><br/>
+                    <img src="${static_url}/koslab/platocdp-enterprise-cycle.png"/>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="installation" class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-6">
+                    <h2 class="section-heading" style="text-align:center">Installation</h2>
+                    <h3>Preparing the Operating System</h3>
+                    <p>PlatoCDP 4.0 packages are built and tested on CentOS 6.5 as the base platform, and should also be installable on RHEL 6.5. Some packages are dependent on the EPEL repository provided by Fedora Project. To install EPEL, run:</p>
+                    <pre>$ sudo rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm</pre>
+                    <p>Now we need to install the KOSLAB repository, which stores the PlatoCDP RPMS and its dependencies:</p>
+                    <pre>
+$ cd /etc/yum.repos.d/                            
+$ sudo wget http://repo.koslab.org/EL6/koslab.repo</pre>
+                    <h3>Installing &amp; initializing PlatoCDP</h3>
+                    <p>After installing the repositories, you can now install PlatoCDP using this command</p>
+                    <pre>$ sudo yum install platocdp</pre>
+                    <p>Review the configuration files in <code>/etc/platocdp</code>, then, run this command to initialize the buildout</p>
+                    <pre>$ sudo platocdp rebuild</pre>
+                    <h3>Configuring HAProxy and Varnish</h3>
+                    <p>The buildout will generate a sample haproxy and varnish config files for use with it. For immediate setup, you can copy and override 
+                        the default configuration files with the one generated by PlatoCDP. </p>
+                    <pre>
+$ sudo cp /var/www/platocdp/etc/haproxy.cfg /etc/haproxy.cfg
+$ sudo cp /var/www/platocdp/etc/varnish.vcl /etc/varnish/default.vcl
+</pre>
+                    <p>You will also need to change the default port of varnish to port 80. To do that, edit <code>/etc/sysconfig/varnish</code> and
+                        set <code>VARNISH_LISTEN_PORT=80</code></p>
+                    <h3>Start Varnish, HAProxy and PlatoCDP</h3>
+                    <pre>
+$ sudo service varnish start
+$ sudo service haproxy start
+$ sudo service platocdp start
+</pre>
+                    <p>The PlatoCDP server should be now accessible at <code>http://server-address/</code>. 
+                        Load the URL, create a Plone site with <code>platocdp.policy</code> add-on and you can now use the distribution!</p>
+                </div>
+            </div>
+            <!-- /.container -->
+        </div>
+    </div>
+
+
+    <div id="enterprise" class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-6">
+                    <h2 class="section-heading">Enterprise Services, Training &amp; Support</h2>
+                    <p class="lead">KOSLAB provides professional services services, training programs, and support subscriptions for PlatoCDP. If you are interested for our offerings, drop us an email at <span style="unicode-bidi: bidi-override;direction:rtl;font-weight:bold"><code>gro.balsok@ofni</code></span>
+                    </p>
+                </div>
+            </div>
+            <!-- /.container -->
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
