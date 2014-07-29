@@ -3,8 +3,14 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       metal:use-macro="main_template.macros['master']">
-<head>
-</head>
+        <head>
+            <metal:slot fill-slot="head_metadata">
+                <title>KOSLAB PlatoCDP</title>
+                <meta property="og:title" content="KOSLAB PlatoCDP"/>
+                <meta property="og:description" content="Enterprise Plone distribution for intranet, extranet, and knowledge sharing portals"/>
+                <meta property="og:image" content="${static_url}/koslab-logo.png"/>
+            </metal:slot>
+        </head>
 <body>
     <div metal:fill-slot="content">
     <div class="intro-header">

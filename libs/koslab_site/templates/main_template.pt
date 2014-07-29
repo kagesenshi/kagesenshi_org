@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>KOSLAB</title>
+    <metal:slot define-slot="head_metadata">
+    </metal:slot>
 
     <!-- Bootstrap core CSS -->
     <link href="${static_url}/landing-page/css/bootstrap.css" rel="stylesheet">
