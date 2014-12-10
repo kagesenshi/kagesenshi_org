@@ -12,7 +12,7 @@ setup(name='kagesenshi_org',
 #        'reg >= 0.5',
         'werkzeug >= 0.9.4',
         'Chameleon >= 2.14',
-        'morepath == 0.2',
+        'morepath == 0.9',
         'wfront',
         'fileserver',
       ]
